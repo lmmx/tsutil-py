@@ -4,6 +4,7 @@ from tree_sitter import Language, Parser
 
 from .node_map import get_node_types, print_node, print_node_type_mapping
 from .node_printer import print_tree
+from .query_executor import execute_query
 
 def guess_language(file_path):
     _, extension = os.path.splitext(file_path)
@@ -23,6 +24,7 @@ def main():
     parser.add_argument("file_path", help="Path to the source code file")
     parser.add_argument("--highlight", action="store_true", help="Print syntax tree with highlighting")
     parser.add_argument("--list-ids", action="store_true", help="List all node IDs and their corresponding names")
+    parser.add_argument("--query", help="Execute a query on the syntax tree")
     
     args = parser.parse_args()
 
@@ -45,7 +47,9 @@ def main():
     tree = parser.parse(bytes(source_code, "utf8"))
     root_node = tree.root_node
 
-    if args.highlight:
+    if args.query:
+        execute_query(language, tree, source_code, args.query)
+    elif args.highlight:
         node_types = get_node_types(language)
         print_node(root_node, source_code, node_types)
     else:

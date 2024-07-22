@@ -10,6 +10,7 @@ guesses the language based on the file extension, and prints the syntax tree usi
 - Uses Tree-sitter for parsing
 - Syntax highlighting for parse trees
 - Lists all node IDs and their corresponding names for a language
+- Query the program's Concrete Syntax Tree (CST) using S-expressions
 
 ## Requirements
 
@@ -46,6 +47,11 @@ guesses the language based on the file extension, and prints the syntax tree usi
    tsutil <file-path> --list-ids
    ```
 
+4. Run the program with the `--query` flag to execute a query on the syntax tree:
+   ```
+   tsutil <file-path> --query "<query-string>"
+   ```
+
 ## Example
 
 To print the syntax tree of a Python source file:
@@ -64,6 +70,12 @@ To list all node IDs and their corresponding names for a Python source file:
 
 ```
 tsutil example/simple_addition.py --list-ids
+```
+
+To query the syntax tree for function definitions:
+
+```
+tsutil example/simple_addition.py --query "(function_definition name: (_) @function_name)"
 ```
 
 ## License
