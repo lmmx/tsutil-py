@@ -1,5 +1,5 @@
 [project]
-name = "tsutil"
+name = "tsutil-py"
 version = "0.1.0"
 description = "Syntax tree printer utility"
 authors = [
