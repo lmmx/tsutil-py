@@ -33,17 +33,17 @@ guesses the language based on the file extension, and prints the syntax tree usi
 
 1. Run the program with a file path as an argument to print the syntax tree:
    ```
-   python main.py <file-path>
+   tsutil <file-path>
    ```
 
 2. Run the program with the `--highlight` flag to print the syntax tree with syntax highlighting:
    ```
-   python main.py <file-path> --highlight
+   tsutil <file-path> --highlight
    ```
 
 3. Run the program with the `--list-ids` flag to list all node IDs and their corresponding names for the language:
    ```
-   python main.py <file-path> --list-ids
+   tsutil <file-path> --list-ids
    ```
 
 ## Example
@@ -51,19 +51,19 @@ guesses the language based on the file extension, and prints the syntax tree usi
 To print the syntax tree of a Python source file:
 
 ```
-python main.py example.py
+tsutil example/simple_addition.py
 ```
 
 To print the syntax tree with syntax highlighting:
 
 ```
-python main.py example.py --highlight
+tsutil example/simple_addition.py --highlight
 ```
 
 To list all node IDs and their corresponding names for a Python source file:
 
 ```
-python main.py example.py --list-ids
+tsutil example/simple_addition.py --list-ids
 ```
 
 ## License
