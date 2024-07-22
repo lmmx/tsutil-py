@@ -1,4 +1,5 @@
 from tree_sitter import Query
+from termcolor import colored as C
 
 def execute_query(language, tree, source_code, query_string):
     try:
@@ -11,6 +12,6 @@ def execute_query(language, tree, source_code, query_string):
 
     for capture in captures:
         node, capture_name = capture
-        start, end = node.start_point, node.end_point
-        captured_text = node.text.decode()
-        print(f"{capture_name}: {captured_text} ({start} - {end})")
+        # start, end = node.start_point, node.end_point
+        captured_text = C(node.text.decode(), 'light_red')
+        print(f"{capture_name}: {captured_text}")

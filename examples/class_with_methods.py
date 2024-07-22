@@ -1,4 +1,5 @@
 class A:
+    """Has methods"""
     a: int = 0
 
     def __init__(self) -> None:
@@ -11,3 +12,6 @@ class A:
     @classmethod
     def bar(cls) -> int:
         return cls.a
+
+class B:
+    """No methods"""
