@@ -6,7 +6,7 @@ def get_node_types(language):
 def print_node(node, source_code, node_types):
     node_kind_id = node.kind_id
     node_type = node_types[node_kind_id]
-    node_text = source_code[node.start_byte:node.end_byte]
+    node_text = node.text.decode()
     
     print(f"{node_type}: {colored(node_text, 'green')}")
 

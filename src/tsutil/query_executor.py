@@ -11,6 +11,6 @@ def execute_query(language, tree, source_code, query_string):
 
     for capture in captures:
         node, capture_name = capture
-        start_point, end_point = node.start_point, node.end_point
-        captured_text = source_code[node.start_byte:node.end_byte]
-        print(f"{capture_name}: {captured_text} ({start_point} - {end_point})")
+        start, end = node.start_point, node.end_point
+        captured_text = node.text.decode()
+        print(f"{capture_name}: {captured_text} ({start} - {end})")
