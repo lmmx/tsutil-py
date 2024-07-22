@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:a47597be6b5db09dde0dd7541b78a663b7ddb367a536ff4710386be677668b3f"
+content_hash = "sha256:c776770d2087def206d488c2db7c06223ad3b33e8774d49488d097c6718ca846"
 
 [[metadata.targets]]
 requires_python = ">=3.10"
@@ -23,12 +23,33 @@ files = [
 
 [[package]]
 name = "tree-sitter"
-version = "0.20.1"
-requires_python = ">=3.3"
+version = "0.22.3"
+requires_python = ">=3.9"
 summary = "Python bindings to the Tree-sitter parsing library"
 groups = ["default"]
 files = [
-    {file = "tree_sitter-0.20.1.tar.gz", hash = "sha256:e93f082c545d6649bcfb5d681ed255eb004a6ce22988971a128f40692feec60d"},
+    {file = "tree-sitter-0.22.3.tar.gz", hash = "sha256:6516bcef5d36e0365670b97c91a169c8b1aa82ea4b60946b879020820718ce3d"},
+    {file = "tree_sitter-0.22.3-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:d9a26dd80cf10763527483b02ba35a0b8d9168f324dbbce3f07860256c29bf15"},
+    {file = "tree_sitter-0.22.3-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:4bcbe0a7358628629d9ec8e5687477e12f7c6aae6943b0872afb7170db039b86"},
+    {file = "tree_sitter-0.22.3-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:dfa45e6bf2542862ce987482fe212ef3153bd331d5bba5873b9f485f8923f65a"},
+    {file = "tree_sitter-0.22.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:4545b142da82f9668007180e0081583054682d0154cd6349796ac77dc8520d63"},
+    {file = "tree_sitter-0.22.3-cp310-cp310-musllinux_1_1_aarch64.whl", hash = "sha256:4978d22fe2868ab9a91125f49bd576ce5f954cc887c19471e0c33e104f37ba71"},
+    {file = "tree_sitter-0.22.3-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:0ec593a69f8c4f1c81494147814d11b7fc6c903e5299e084ae7b89caf95cef84"},
+    {file = "tree_sitter-0.22.3-cp310-cp310-win_amd64.whl", hash = "sha256:0f66b88b8e9993630613d594e845f3cf2695fef87d0ca1475437cb17eeb72dc5"},
+    {file = "tree_sitter-0.22.3-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:9e627eb129421f63378e936b5d0e13b8befa6e7c5267a8a7621a397a84e8f1f7"},
+    {file = "tree_sitter-0.22.3-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:3cfa2a9860bfb0404ae28a9cf056dab8f2eb7f1673d8cc9b3f7e21452daad0e0"},
+    {file = "tree_sitter-0.22.3-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:d9a66cc5f19635119a9d8325bcb00a58ed48427e3c3d307caf7c00d745ac83a5"},
+    {file = "tree_sitter-0.22.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:de16468ea22c910e67caa91c99be9d6eb73e97e5164480a890f678b22d32faca"},
+    {file = "tree_sitter-0.22.3-cp311-cp311-musllinux_1_1_aarch64.whl", hash = "sha256:98c697427f82abab6b39cfe2ade6547d844dd419fa8cfc89031bcdf7c10579b6"},
+    {file = "tree_sitter-0.22.3-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:548aa34f15a29aef1fc8e85507f13e0678a54f1de16461f844d86179b19bb5f6"},
+    {file = "tree_sitter-0.22.3-cp311-cp311-win_amd64.whl", hash = "sha256:2fc0e1097fb86623b340141e80a0f2b7668b09d953501d91adc715a577e32c61"},
+    {file = "tree_sitter-0.22.3-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:7cb5c145fbd4bcc0cd4851dc4d0a6079a8e2f61257f8c0effc92434f6fb19b14"},
+    {file = "tree_sitter-0.22.3-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:d4a592080db6b9472a886f4593b4705d02630721fdbe4a700085fe775fcab20e"},
+    {file = "tree_sitter-0.22.3-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:f36bf523763f05edf924126583ea997f905162046c0f184d6fd040cc1ccbf2c5"},
+    {file = "tree_sitter-0.22.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f8e1193f27c25aab299f4fc154664122c7bfe80633b726bb457356d371479a5b"},
+    {file = "tree_sitter-0.22.3-cp312-cp312-musllinux_1_1_aarch64.whl", hash = "sha256:156df7e71a6c6b542ff29526cad6886a41115e42dc768c55101398d68325db54"},
+    {file = "tree_sitter-0.22.3-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:82e1d467ce23dd2ecc37d4fb83965e891fc37b943639c517cd5acf54a2df0ff7"},
+    {file = "tree_sitter-0.22.3-cp312-cp312-win_amd64.whl", hash = "sha256:e541a0c08a04f229ba9479a8c441dd267fdaa3e5842ae70a744c178bcaf53fa3"},
 ]
 
 [[package]]

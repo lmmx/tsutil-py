@@ -2,17 +2,19 @@ import argparse
 import os
 from tree_sitter import Language, Parser
 
-from node_map import get_node_types, print_node, print_node_type_mapping
-from node_printer import print_tree
+from .node_map import get_node_types, print_node, print_node_type_mapping
+from .node_printer import print_tree
 
 def guess_language(file_path):
     _, extension = os.path.splitext(file_path)
     extension = extension.lstrip('.')
     
     if extension == 'rs':
-        return Language('build/my-languages.so', 'rust')
+        import tree_sitter_rust as tsrust
+        return Language(tsrust.language())
     elif extension == 'py':
-        return Language('build/my-languages.so', 'python')
+        import tree_sitter_python as tspython
+        return Language(tspython.language())
     else:
         raise ValueError(f"Unsupported file extension: {extension}")
 
@@ -48,6 +50,3 @@ def main():
         print_node(root_node, source_code, node_types)
     else:
         print_tree(root_node, source_code, 0)
-
-if __name__ == "__main__":
-    main()
